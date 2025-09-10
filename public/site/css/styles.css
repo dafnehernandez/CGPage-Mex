@@ -1,0 +1,376 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333232; 
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #a02a2a;
+            padding: 20px 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        .site-header{
+            background-color:#a02a2a;
+            display:flex;
+            align-items:center;
+           /* justify-content:space-between;*/
+            justify-content: center;
+            gap: 12px;
+           /* padding:14px 16px; */
+            padding: 14px 16px;
+        }
+
+/*HEADER*/
+
+        .header-text{
+           /* flex:1;                 /* ocupa el centro */
+            text-align:center;
+        }
+
+        .header-icon{
+            width:100px;             /* ancho fijo para mantener el centro perfecto */
+            height:100px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            /*flex:0 0 100px;*/
+        }
+
+        .header-icon img{
+            max-width:100%;
+            max-height:100%;
+            object-fit:contain;
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width:600px){
+            .header-icon{ width:44px; height:44px; }
+            .header-text h1{ font-size:1.6rem; margin:0; }
+            .header-text p{ font-size:0.9rem; margin:4px 0 0; }
+        }
+
+/*FINHEADER*/
+
+        .lightsaber-container { /* A new container to hold the image and the bar */
+            display: flex; /* Use flexbox to put image and bar side-by-side */
+            align-items: center; /* Vertically align them in the middle */
+            margin-bottom: 0px; 
+            justify-content: center;
+        }
+
+        .lightsaber {
+            --progress: 0%;
+            --color: #ff4444;
+            --dark-color: color-mix(in srgb, var(--color), red 55%);
+/*
+            position: absolute;
+            right: -8%; /* Desde la derecha de la imagen */
+
+            width: 850px;
+            height: 30px;
+            margin-left: 0px; /* O la cantidad mínima para que se "pegue" visualmente */
+            margin: 4rem;
+        }
+
+        .bar {
+            background-color: transparent;
+            height: 120%;
+            border-radius: 30px;
+        }
+
+        .extend-value{
+            width: var(--progress);
+            height: 100%;
+            background: linear-gradient(to bottom, var(--color), var(--dark-color), var(--color));
+            box-shadow: 0 0 15px 5px var(--color),
+                        0 0 40px 15px var(--color); /* Even stronger glow */
+            border-radius: 30px;
+            transition: width 0.5s linear;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 -100px;
+            }
+        }
+
+        .logo {
+            max-width: 250px;
+            margin: 20px auto;
+        }
+
+        .sabervader {
+            max-width: 300px; /* Adjust size as needed */
+            height: auto; /* Adjust size as needed */
+            object-fit: contain; /* Ensure the image fits within its bounds */
+            margin-right: -85px;           
+        }
+
+        .menu-trigger {
+            cursor: pointer;
+            color: white;
+            font-family:'Star Wars';
+            text-align: center;
+            margin-top: 10px;
+            margin-right: 50px;
+            margin-left: -20px; 
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .menu-trigger:hover {
+            color: #ff4444;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #fff;
+            /*color: #EDB62F;*/
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #FA2A2A;
+        }
+
+        .golden-link{
+            color: #EDB62F;
+        }
+
+        .legion-logo {
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        h1, h2, h3, .seccion-titulo, .menu-superior {
+            font-family:'Star Wars', sans-serif;
+            font-weight: 600;
+          /*  color: #d71c1c; Rojo imperial */
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            background-color: #FA2A2A;         
+            color: white;
+           /* font-family: 'Luckiest Guy', sans-serif; */
+            font-family:'Star Wars', 'Luckiest Guy';
+            font-size: 2rem;
+            text-align: center;
+            padding: 10px 20px 10px 20px; /* arriba | derecha | abajo | izquierda */
+            letter-spacing: 2px;
+            /*text-transform: uppercase;*/
+            border-top: 4px solid #999;
+            border-bottom: 4px solid #999;
+            margin: 10px 150px;
+        }
+              
+        h3 { 
+            color: #F5DB8E;
+            font-family: 'Luckiest Guy', sans-serif;
+            font-size: 1.5rem; 
+            font-style: normal; 
+            font-variant: normal; 
+            font-weight: 700; 
+            line-height: 30px; 
+        } 
+        
+        p { 
+            font-family: Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif; 
+            font-size: 20px; 
+            font-style: normal; 
+            font-variant: normal; 
+            font-weight: 400; 
+            line-height: 28px; 
+        }
+
+        .info{
+            text-align: justify;
+            line-height: 35px;
+        }
+
+        .info a:hover{
+            color: #ff4444;
+            text-decoration: underline;
+        }
+
+        .centrado-destacado {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .centrado-destacado a:hover {
+            color: #ff4444;
+            text-decoration: underline;
+        }
+
+        .requisitos{
+            font-family: Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif; 
+            font-size: 20px; 
+            font-style: normal;
+            color: #EDB62F;
+            text-align: left;
+            padding-left: 40px;  /* sangría izquierda para las viñetas */
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contacto{
+            font-size: 16px;
+        }
+
+        .contacto a:hover{
+            color: #ff4444;
+            text-decoration: underline;
+        }
+
+        .disclaimer a {
+            font-size: 14px;
+            text-transform: uppercase; 
+            margin-top: 40px;
+        }
+
+        .disclaimer b {
+            font-size: 0.6em;
+            font-weight: normal; 
+            margin-top: 40px;
+            max-width: 1000px;        /* Limita el ancho total */
+            margin: 0 auto;          /* Centra horizontalmente */
+            padding: 0 20px;           /* Espaciado interno (opcional) */     
+            display: block; /* O display: inline-block; si prefieres que se comporte un poco más como línea */
+        }
+
+        /* OTROS */
+
+        .error {
+            /*max-width: 50px; */
+            width: 1500px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #C17710; /* Color del fondo */
+            color: white; /* Color del texto */
+            text-decoration: none; /* Quita subrayado */
+            font-family: 'Star Wars', sans-serif; /* Mantiene tu estilo */
+            font-size: 1rem;
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .btn-home:hover {
+            background-color: #a65e0d; /* Color al pasar el mouse */
+            color: white;
+        }
+
+        .photobook{
+            width: 800px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Ajusta la imagen para que cubra todo el contenedor */
+            background-size: cover; 
+            /* Centra la imagen */
+            background-position: center; 
+            /* El z-index negativo lo coloca detrás de todo el contenido */
+            z-index: -1;
+            
+         }
+
+            /* Crea la capa de opacidad usando un pseudo-elemento */
+        .background-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Establece el color y la opacidad */
+            /*background-color: rgba(34, 31, 31, 0.7); /* Negro con 50% de opacidad */
+            /*background-color: rgba(34, 31, 31, 0.3); */
+            z-index: 1; /* Coloca esta capa por debajo del contenido */
+        }
+
+        #background-home{
+             /* Carga la imagen de fondo */            
+            background-image: url("/site/img/StarWars_Desert_Background.png");
+        }
+
+        #background-unirme{            
+            background-image: url("/site/img/bg-troopers.jpg"); 
+        }
+
+        #background-evento{            
+            background-image: url("/site/img/SG-bg-dark.png"); 
+        }
+
+        #background-contacto{            
+            background-image: url("/site/img/background-trooper.jpg"); 
+        }
+
+        /* Fondo oscuro */
+        .background-container.oscuro::before {
+            background-color: rgba(34, 31, 31, 0.3);
+        }
+
+        /* Fondo claro */
+        .background-container.claro::before {
+            background-color: rgba(239, 239, 239, 0.174);
+        }
+
+        /* Fondo claro */
+        .background-container.muyclaro::before {
+            background-color: rgba(241, 235, 235, 0.403);
+        }
+
+        .background-container.inter::before {
+            background-color: rgba(158, 155, 155, 0.162);
+        }

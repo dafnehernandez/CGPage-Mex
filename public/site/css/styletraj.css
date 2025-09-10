@@ -1,0 +1,57 @@
+.menu-superior a{
+    color: white;
+}
+
+.detachment {
+  margin-bottom: 80px;
+}
+
+.detachment h3,a {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  /*color: #2a4c8b;*/
+  color: #F5DB8E;
+}
+
+.detachment p {
+    text-align: justify;
+}
+
+.detachment-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* centra todo el bloque dentro del contenedor */ 
+  gap: 50px;
+  max-width: 900px;  /* o el ancho que desees */
+  margin: 0 auto;
+}
+
+.detachment-text {
+  flex: 1;
+}
+
+.costume-link {
+  font-family:'Star Wars';
+  font-size: 0.8rem;
+  text-align: center;
+  color: #C17710;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.costume-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: en pantallas pequeñas, acomoda en columna */
+@media (max-width: 768px) {
+  .detachment-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detachment-text {
+    text-align: center;
+  }
+}
